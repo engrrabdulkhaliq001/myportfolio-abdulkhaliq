@@ -7,7 +7,7 @@ I am a passionate **Data Scientist** and **AI Engineer** focused on building int
 ## 🎓 Education
 
 **B.Sc. in Computer Science**  
-Institution: [Your University]  
+Institution: [Progress]  
 Years: 2024 – 2025
 
 ## 🔍 Interests
