@@ -1,0 +1,22 @@
+{
+  "name": "myportfolio-abdulkhaliq",
+  "version": "2.0.0",
+  "description": "Abdul Khaliq — AI & Backend Systems Engineer Portfolio",
+  "scripts": {
+    "dev": "npx serve . -l 3000",
+    "start": "npx serve . -l 3000",
+    "build": "node scripts/build-check.js",
+    "lint": "node -c script.js",
+    "test": "node scripts/test-integrity.js"
+  },
+  "keywords": [
+    "portfolio",
+    "ai-engineer",
+    "backend-engineer",
+    "rag",
+    "fastapi",
+    "onnx-runtime"
+  ],
+  "author": "Abdul Khaliq <engrrabdulkhaliq@gmail.com>",
+  "license": "MIT"
+}
