@@ -16,8 +16,8 @@
 // Configure your Supabase Project URL and Anon Public Key below.
 // ============================================================================
 const SUPABASE_CONFIG = {
-  url: window.SUPABASE_URL || 'https://YOUR_SUPABASE_PROJECT_ID.supabase.co',
-  anonKey: window.SUPABASE_ANON_KEY || 'YOUR_SUPABASE_ANON_PUBLIC_KEY',
+  url: window.SUPABASE_URL || 'https://vxqfteosjhhmgxqiamva.supabase.co',
+  anonKey: window.SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ4cWZ0ZW9zamhobWd4cWlhbXZhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc5ODQ0OTksImV4cCI6MjEwMzU2MDQ5OX0.SN1AoBj1cxr6lyY6Den6GuudAUeq50qVuwnssWOLEpk',
   tableName: 'contact_messages'
 };
 
@@ -233,13 +233,10 @@ function initContactForm() {
 
         if (error) throw error;
 
-        showAlert('success', `Thank you, ${name}! Your message was securely delivered and recorded.`);
+        showAlert('success', `Thank you, ${name}! Your message was successfully saved to the database.`);
         form.reset();
       } else {
-        // Fallback for demo / unconfigured credentials
-        await new Promise(resolve => setTimeout(resolve, 600));
-        showAlert('success', `Thank you, ${name}! Your message payload was validated. (Supabase is running in local template mode; you can also reach me directly at engrrabdulkhaliq@gmail.com).`);
-        form.reset();
+        throw new Error('Supabase client is not connected. Please verify your connection.');
       }
     } catch (err) {
       console.error('Contact form error:', err);
