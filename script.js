@@ -233,14 +233,14 @@ function initContactForm() {
 
         if (error) throw error;
 
-        showAlert('success', `Thank you, ${name}! Your message was successfully saved to the database.`);
+        showAlert('success', `<strong>Thank you, ${escapeHtml(name)}!</strong><br />Your message has been sent successfully. I'll get back to you soon.`);
         form.reset();
       } else {
-        throw new Error('Supabase client is not connected. Please verify your connection.');
+        throw new Error('Unable to establish connection. Please email me directly at engrrabdulkhaliq@gmail.com');
       }
     } catch (err) {
       console.error('Contact form error:', err);
-      showAlert('error', `Failed to send message: ${err.message || 'Database error'}. You can email me directly at engrrabdulkhaliq@gmail.com`);
+      showAlert('error', `Something went wrong while sending your message. Please try again or reach out directly at engrrabdulkhaliq@gmail.com.`);
     } finally {
       setButtonLoading(false);
     }
@@ -273,6 +273,16 @@ function initContactForm() {
 
   function hideAlert() {
     alertBox.style.display = 'none';
+  }
+
+  function escapeHtml(str) {
+    if (!str) return '';
+    return str
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
   }
 }
 
