@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initProjectModals();
   initCopyEmail();
   initCurrentYear();
+  initScrollReveal();
 });
 
 // ============================================================================
@@ -493,4 +494,32 @@ function initCurrentYear() {
   if (yearElem) {
     yearElem.textContent = new Date().getFullYear();
   }
+}
+
+// ============================================================================
+// 10. SCROLL REVEAL ANIMATIONS
+// ============================================================================
+function initScrollReveal() {
+  const revealElements = document.querySelectorAll('.reveal-on-scroll');
+  if (!revealElements.length) return;
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion) {
+    revealElements.forEach(el => el.classList.add('revealed'));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  revealElements.forEach(el => observer.observe(el));
 }

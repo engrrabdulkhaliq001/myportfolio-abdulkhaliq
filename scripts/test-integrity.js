@@ -18,14 +18,14 @@ function assert(condition, testName) {
 // 1. Check style.css palette tokens
 const styleCss = fs.readFileSync(path.join(projectRoot, 'style.css'), 'utf-8');
 console.log('\n[Suite 1: Palette Tokens in style.css]');
-assert(styleCss.includes('#080E18'), 'Midnight Navy (#080E18) is defined');
-assert(styleCss.includes('#111B2B'), 'Slate Blue (#111B2B) is defined');
-assert(styleCss.includes('#22D3EE'), 'Electric Cyan (#22D3EE) is defined');
-assert(styleCss.includes('#F1F5F9'), 'Soft White (#F1F5F9) is defined');
-assert(styleCss.includes('#94A3B8'), 'Muted Slate (#94A3B8) is defined');
-assert(styleCss.includes('#8B7CFF'), 'Soft Violet (#8B7CFF) is defined');
-assert(styleCss.includes('rgba(148, 163, 184, 0.15)'), 'Subtle border (rgba(148, 163, 184, 0.15)) is defined');
-assert(styleCss.includes('rgba(34, 211, 238, 0.45)'), 'Cyan hover border (rgba(34, 211, 238, 0.45)) is defined');
+assert(styleCss.includes('#FAFAFA'), 'Background Soft White (#FAFAFA) is defined');
+assert(styleCss.includes('#18181B'), 'Primary / Surface Zinc Dark (#18181B) is defined');
+assert(styleCss.includes('#2563EB'), 'Accent / Highlight Royal Blue (#2563EB) is defined');
+assert(styleCss.includes('#71717A'), 'Muted Text Cool Slate (#71717A) is defined');
+assert(styleCss.includes('--transition-fast'), 'Fast transition token is defined');
+assert(styleCss.includes('reveal-on-scroll'), 'Scroll reveal animation rule is defined');
+assert(styleCss.includes('prefers-reduced-motion'), 'prefers-reduced-motion media query is defined');
+assert(styleCss.includes('subtleFloat'), 'Restrained hero animation (subtleFloat) is defined');
 
 // 2. Check index.html section anchors and content
 const indexHtml = fs.readFileSync(path.join(projectRoot, 'index.html'), 'utf-8');
