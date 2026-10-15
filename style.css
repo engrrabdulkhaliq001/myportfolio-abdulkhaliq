@@ -1648,3 +1648,91 @@ textarea.form-control {
     padding: 1.15rem;
   }
 }
+
+
+/* ===================================================================
+   PORTFOLIO UPDATE — project media, key metrics, pending links
+   =================================================================== */
+.project-media {
+  display: block;
+  margin: 0 0 1.25rem 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-secondary);
+  aspect-ratio: 16 / 9;
+  max-height: 280px;
+}
+
+.project-media[hidden] {
+  display: none;
+}
+
+.project-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.modal-diagram {
+  margin: 0 0 1.25rem 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-secondary);
+}
+
+.modal-diagram img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-metric {
+  display: inline-flex;
+  align-items: baseline;
+  align-self: flex-start;
+  gap: 0.6rem;
+  margin: 0 0 1.15rem 0;
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--radius-md);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+}
+
+.project-metric-value {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  letter-spacing: -0.01em;
+}
+
+.project-metric-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.link-pending {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.project-card.is-entering {
+  animation: projectCardIn 280ms ease both;
+}
+
+@keyframes projectCardIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.project-footer {
+  flex-wrap: wrap;
+}
+
+.section-title {
+  text-wrap: balance;
+}
