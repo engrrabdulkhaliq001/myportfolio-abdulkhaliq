@@ -1,6 +1,6 @@
 /**
  * Abdul Khaliq Portfolio - script.js
- * AI & Backend Systems Engineer
+ * Backend Systems & AI Engineer
  * 
  * Features:
  * - Supabase Contact Form Integration (@supabase/supabase-js)
@@ -116,6 +116,7 @@ function initNavbar() {
 // ============================================================================
 function initMetricsAnimation() {
   const metricValues = document.querySelectorAll('.metric-val-num');
+  if (!metricValues.length) return;
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   if (prefersReducedMotion) {
