@@ -401,7 +401,7 @@ const PROJECT_DETAILS = {
       'Containerized execution environment ensuring consistent model inference and sub-100ms segmentation dispatch.'
     ],
     github: '#',
-    demo: '#',
+    demo: 'https://iconspire.habitscraft.com/',
     image: '',
     diagram: ''
   },
@@ -432,8 +432,8 @@ const PROJECT_DETAILS = {
       'Integrated Groq API LLaMA 3 acceleration with FAISS vector stores for ultra-low latency inference.',
       'Implemented vector search clustering in FAISS to rank top-k semantic passages accurately.'
     ],
-    github: '#',
-    demo: '#',
+    github: 'https://github.com/engrrabdulkhaliq/rage-teaching-assistant',
+    demo: 'https://rage-based-ai-cleaned-7ccsipacoxfgzc3wzqrufd.streamlit.app/',
     image: '',
     diagram: ''
   },
@@ -448,8 +448,8 @@ const PROJECT_DETAILS = {
       'Created an interactive Streamlit analytics dashboard for recruiters to visualize applicant rankings and candidate score distributions.',
       'Structured cosine similarity scoring pipelines with custom entity recognition for tech skills.'
     ],
-    github: '#',
-    demo: '#',
+    github: 'https://github.com/engrrabdulkhaliq001/Resume-screening-ai/tree/main',
+    demo: 'https://resume-screening-ai-ct5hlbyrzyu78bf7gvrguc.streamlit.app/',
     image: '',
     diagram: ''
   },
