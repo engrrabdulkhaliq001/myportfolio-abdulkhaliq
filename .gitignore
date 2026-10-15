@@ -1,9 +1,22 @@
-# Environment Variables
-.env
-.env.local
-.env.*.local
-
-# Node modules & temporary files
-node_modules/
+# Operating System Files
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# Editor folders
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Dependencies
+node_modules/
+
+# Environment & deployment
+.env
+.env.local
+.env.*
+.vercel/
+
+# Temporary / extraction folders
+portfolio-updated/
